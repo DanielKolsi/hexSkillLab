@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Edit Serie</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="updateSerie(serie._id)" #serieForm="ngForm">
+        <div class="form-group">
+          <label for="name">Title</label>
+          <input type="text" class="form-control" [(ngModel)]="serie.title" name="title">
+        </div>
+        <div class="form-group">
+          <label for="name">Type</label>
+          <input type="text" class="form-control" [(ngModel)]="serie.type" name="type">
+        </div>
+        <div class="form-group">
+          <label for="name">Publisher</label>
+          <input type="text" class="form-control" [(ngModel)]="serie.publisher" name="publisher" >
+        </div>
+        <div class="form-group">
+          <label for="name">Published date</label>
+          <input type="text" class="form-control" [(ngModel)]="serie.published_date" name="published_date">
+        </div>
+        <div class="form-group">
+          <label for="name">Description</label>
+          <input type="number" class="form-control" [(ngModel)]="serie.description" name="description">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" [disabled]="!serieForm.form.valid">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

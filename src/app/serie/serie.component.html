@@ -1,0 +1,40 @@
+<div class="container">
+ 
+  <div>
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <p>You're logged in on Thandi!</p>
+    <h3>All registered users:</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.username}} ({{user.firstName}} {{user.lastName}})
+            - <a (click)="deleteUser(user._id)">Delete</a>
+        </li>
+    </ul>
+    <p><a [routerLink]="['/login']">Logout</a></p>
+</div>
+  <h1>Hall Of Fame</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Company</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let serie of series">
+        <td>{{ serie.title }}</td>
+        <td>{{ serie.type }}</td>
+        <td>{{ serie.publisher }}</td> 
+        <td><a [routerLink]="['/serie-edit', serie._id]" class="btn btn-success">EDIT</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3>Add new serie's review
+  <a [routerLink]="['/serie-create']" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </a>
+</h3>

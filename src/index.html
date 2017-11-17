@@ -1,14 +1,132 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-  <title>Thandi2</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Angular Project | Hexaware Technologies</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!--  
+    Stylesheets
+    =============================================
+    
+    -->
+    <!-- Default stylesheets-->
+    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    
+    <!-- Main stylesheet and color file-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
-<body>
-  <app-root></app-root>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <main>
+      <div class="page-loader">
+        <div class="loader"></div>
+      </div>
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">Angular | Hexaware Training</a>
+      </div>
+      </nav>
+      <section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="assets/images/agency/agency_bg.jpg">
+        <div class="titan-caption">
+          <div class="caption-content">
+            <div class="font-alt mb-30 titan-title-size-1">Thandi</div>
+            <div class="font-alt mb-40 titan-title-size-3">Thandi | Series  and Movies Review
+            </div><a class="section-scroll btn btn-border-w btn-circle" href="#about">Let's go!</a>
+          </div>
+        </div>
+      </section>
+      <div class="main">
+        <section class="module">
+          <div class="container">
+            <div class="row multi-columns-row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-lightbulb"></span></div>
+                  <h3 class="features-title font-alt">Who we are</h3>We are leaders on our market, we provide a complete service to review any actual or past tv show or movie.
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-tools"></span></div>
+                  <h3 class="features-title font-alt">Social Network</h3>We are involved on the main social networks around the world to provide our information to anyone.
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-tools-2"></span></div>
+                  <h3 class="features-title font-alt">Technology</h3>We are leaders on our market, we provide a complete service to review any actual or past tv show or movie.
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="features-item">
+                  <div class="features-icon"><span class="icon-lifesaver"></span></div>
+                  <h3 class="features-title font-alt">Partners</h3>Amazon Web Services, Microsoft.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                
+        <hr class="divider-w">
+        
+        <div id="about">
+          <app-root>Loading application...</app-root>
+        </div>
+             <div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="widget">
+                  <h5 class="widget-title font-alt">Angular Course</h5>
+                  <p>Angular course for beginners, used for learning purposes.</p>
+                  <p>Phone: +52 1 8180258667</p>Tel: +52 1 844 567 89 10
+                  <p>Email:<a href="#">hola@hexaware.com</a></p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <hr class="divider-d">
+        <footer class="footer bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">Hexaware Technologies</a>, All Rights Reserved</p>
+              </div>
+              <div class="col-sm-6">
+                <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+    </main>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!--  
+    JavaScripts
+    =============================================
+    -->
+  <script src="assets/lib/jquery/dist/jquery.js"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/lib/wow/dist/wow.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

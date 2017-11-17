@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>{{ serie.title }}</h1>
+  <dl class="list">
+    <dt>Title</dt>
+    <dd>{{ serie.title }}</dd>
+    <dt>Type</dt>
+    <dd>{{ serie.type }}</dd>
+    <dt>Company</dt>
+    <dd>{{ serie.publisher }}</dd>
+  </dl>
+</div>
+  <div class="row">
+        <div class="col-md-12">
+          <a [routerLink]="['/serie-edit', serie._id]" class="btn btn-success">EDIT</a>
+          <button class="btn btn-danger" type="button" (click)="deleteSerie(serie._id)">DELETE</button>
+          <a href="http://localhost:3000/#/series" class="btn btn-success">HOME</a>
+        </div>
+  </div>

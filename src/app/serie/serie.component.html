@@ -1,17 +1,4 @@
 <div class="container">
- 
-  <div>
-    <h1>Hi {{currentUser.firstName}}!</h1>
-    <p>You're logged in on Thandi!</p>
-    <h3>All registered users:</h3>
-    <ul>
-        <li *ngFor="let user of users">
-            {{user.username}} ({{user.firstName}} {{user.lastName}})
-            - <a (click)="deleteUser(user._id)">Delete</a>
-        </li>
-    </ul>
-    <p><a [routerLink]="['/login']">Logout</a></p>
-</div>
   <h1>Hall Of Fame</h1>
   <table class="table">
     <thead>

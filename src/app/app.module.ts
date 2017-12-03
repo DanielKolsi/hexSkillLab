@@ -13,27 +13,29 @@ import { SerieCreateComponent } from './serie-create/serie-create.component';
 import { SerieEditComponent } from './serie-edit/serie-edit.component';
 
 //import { AlertService } from './alert.service';
-//import { AuthenticationService } from './authentication.service';
-//import { UserService  } from './user.service';
+import { AuthenticationService } from './authentication.service';
+import { UserService  } from './user.service';
 
-//import { customHttpProvider } from './helpers/custom-http';
+import { customHttpProvider } from './helpers/custom-http';
 
-//import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './auth.guard';
 
-//import { AlertComponent } from './alert/alert.component';
-//import { LoginComponent } from './login/login.component';
-//import { RegisterComponent } from './register/register.component';
+import { AlertComponent } from './alert/alert.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { RegisterDetailsComponent } from './register-details/register-details.component';
 
 const ROUTES = [
-  { path: '', redirectTo: 'series', pathMatch: 'full' },
-  { path: 'series', component: SerieComponent }
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] }
 ];
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'series', pathMatch: 'full' },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard]},
   { path: 'series', component: SerieComponent},
-  //{ path: 'login', component: LoginComponent },
-  //{ path: 'register', component: RegisterComponent },
+  { path: 'login', component:LoginComponent  },
+  { path: 'home', component: HomeComponent},
+  { path: 'register', component: RegisterComponent },
   { path: 'serie-details/:id', component: SerieDetailComponent },
   { path: 'serie-create', component: SerieCreateComponent },
   { path: 'serie-edit/:id', component: SerieEditComponent }
@@ -42,13 +44,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     SerieComponent,
     SerieDetailComponent,
     SerieCreateComponent,
     SerieEditComponent,
     //AlertComponent,
-    //LoginComponent,
-    //RegisterComponent
+    LoginComponent,
+    RegisterComponent,
+    RegisterDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +61,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    //customHttpProvider,
-    //AuthGuard,
+    customHttpProvider,
+    AuthGuard,
     //AlertService,
-    //AuthenticationService,
-    //UserService,
+    AuthenticationService,
+    UserService,
     SerieService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],

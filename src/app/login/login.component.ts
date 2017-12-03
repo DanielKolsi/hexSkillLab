@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
- 
-import { AlertService } from '../alert.service';
+import { UserService } from '../user.service';
 import { AuthenticationService } from '../authentication.service'
 
 @Component({
@@ -17,8 +16,8 @@ export class LoginComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
-        private alertService: AlertService) { }
+        private userService: UserService,
+        private authenticationService: AuthenticationService){}
  
     ngOnInit() {
         // reset login status
@@ -29,15 +28,17 @@ export class LoginComponent implements OnInit {
     }
  
     login() {
+        var User = require('../models/user.js');
+
         this.loading = true;
-        this.authenticationService.login(this.model.username, this.model.password)
+        this.authenticationService.login(User.username, User.password)
             .subscribe(
                 data => {
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
-                    this.alertService.error(error);
                     this.loading = false;
                 });
     }
 }
+
